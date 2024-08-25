@@ -23,11 +23,10 @@ g = igraph.Graph(
     vertex_attrs=dict(Name=id2name, node_id=node_table["node_id"].values),
 )
 
-
 # %% Test -----------
-topk_closeness_answer = ['Frankfurt Main', 'Charles De Gaulle', 'Heathrow', 'Schiphol', 'Dubai Intl']
+topk_betweenness_answer = ['Frankfurt Main', 'Charles De Gaulle', 'Ted Stevens Anchorage Intl', 'Dubai Intl', 'Guarulhos Gov Andre Franco Montouro']
 
-topk_closeness = top_k_closeness_centrality(g, 5)
+topk_betweenness = top_k_betweenness_centrality(g, 5)
 
-assert set(topk_closeness) == set(topk_closeness_answer), "The top-k closeness centrality results do not match the expected answer."
+assert set(topk_betweenness) == set(topk_betweenness_answer), "The top-k betweenness centrality results do not match the expected answer."
 
