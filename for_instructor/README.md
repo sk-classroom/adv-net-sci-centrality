@@ -2,25 +2,26 @@
 
 ## Workflow
 
-- [ ] Create the teacher notebook with answers
+- [x] Create the teacher notebook with answers
   - Add tag "answer" for the cells with the assignment answers
   - Add tag "gradable" for the cells that are gradable
-- [ ] Write test scripts
+- [x] Write test scripts
   - Write test scripts (e.g., `test_01.py`) and place them in the `tests` folder
   - Make sure that the grading works locally by running `bash grading-toolkit/grade_notebook.sh tests/test_01.py for_instructor/assignment_teacher.ipynb answer`
-- [ ] Generate the student version and the encrypted teacher's notebook
+- [x] Generate the student version and the encrypted teacher's notebook
   - Run the `to_student_version.sh` script by
   - `bash grading-toolkit/to_student_version.sh assignment_teacher.ipynb assignment/assignment.ipynb mypassword`
   - Change the password to something more secure
-- [ ] Add the encrypted teacher's notebook to the repository
+- [x] Add the encrypted teacher's notebook to the repository
   - `git rm -f for-instructor/assignment_teacher.ipynb`
   - `git add for-instructor/assignment_teacher.ipynb.enc & git commit -m "Update assignment" & git push`
-- [ ] Set up the auto-grader
+- [x] Set up the auto-grader
   - Open an assignment in Github Classroom
   - Copy & Paste `classroom.yml` and modify it to fit the assignment
-    - [ ] Modify the test name
-    - [ ] Modify the test id
-    - [ ] Do not forget to add the test id to the `runners` list
+    - [x] Modify the test name
+    - [x] Modify the test id
+    - [x] Do not forget to add the test id to the `runners` list
+    - [x] Add the test id to the `runners` list
 - [ ] Make sure the auto-grader works
   - [ ] Play the student role by yourself by accepting the assignment
   - [ ] Check the auto-grader by yourself by submitting the assignment
